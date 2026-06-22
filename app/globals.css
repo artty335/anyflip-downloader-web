@@ -1,0 +1,23 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* Force a light scheme so OS dark-mode doesn't invert form controls and
+     make typed text unreadable on our white surfaces. */
+  color-scheme: light;
+}
+
+body {
+  @apply min-h-screen bg-slate-50 text-slate-900 antialiased;
+  background-image:
+    radial-gradient(60rem 40rem at 50% -10%, rgba(139, 92, 246, 0.12), transparent),
+    radial-gradient(40rem 30rem at 100% 0%, rgba(99, 102, 241, 0.1), transparent);
+  background-attachment: fixed;
+}
+
+/* Make sure inputs/textareas stay readable regardless of OS theme. */
+input,
+textarea {
+  color-scheme: light;
+}
